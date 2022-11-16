@@ -1,0 +1,14 @@
+name: Build & Publish EE
+
+on:
+  push:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  ee-build:
+    runs-on: ubuntu-latest
+
+  ee-publish:
+    runs-on: ubuntu-latest
