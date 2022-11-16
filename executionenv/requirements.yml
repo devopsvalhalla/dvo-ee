@@ -6,3 +6,6 @@ collections:
   - name: community.windows
   - name: ansible.general
   - name: community.general
+  - name: ansible.utils
+  - name: ansible.posix
+  - name: amazon.aws
