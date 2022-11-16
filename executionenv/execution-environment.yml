@@ -2,12 +2,12 @@
 version: 1
 
 build_arg_defaults:
-  EE_BASE_IMAGE: 'registry.redhat.io/ansible-automation-platform-21/ee-minimal-rhel8'
+  EE_BASE_IMAGE: 'registry.redhat.io/ansible-automation-platform-22/ee-minimal-rhel8'
 
 dependencies:
   galaxy: requirements.yml
   python: requirements.txt
 
 additional_build_steps:
-  append:
+  prepend:
     - RUN microdnf install gcc python3-devel krb5-devel krb5-workstation python-devel
