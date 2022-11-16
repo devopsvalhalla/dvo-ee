@@ -1,19 +1,21 @@
 # Ansible Requirements
-ansible==6.6.0
-ansible-runner==2.3.1
+ansible
+ansible-runner
 
-jmespath>=1.0.0
+cryptography
+simplejson
+jmespath
 
 # Hashicorp vault
-hvac==0.11.2
+hvac
 
 # AWS
-botocore>=1.18.0
-boto3>=1.15.0
-boto>=2.49.0
+botocore
+boto3
+boto
 
 # Azure
-azure-cli>=2.42.0
+azure-cli
 
 # Windows things
-pywinrm[kerberos]==0.4.3
+pywinrm[kerberos]
