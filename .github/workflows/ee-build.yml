@@ -9,6 +9,26 @@ on:
 jobs:
   ee-build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: "executionenv/"
 
-  ee-publish:
-    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@master
+
+      - name: Build Image
+        run: ansible-builder build --tag dov_ee
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{github.actor}}
+          password: ${{secrets.GITHUB_TOKEN}}
+
+      - name: Tag Image
+        run: docker build -t ghcr.io/devopsvalhalla/dov_ee:latest
+
+      - name: Publish Image
+        run: docker push ghcr.io/devopsvalhalla/dov_ee:latest
