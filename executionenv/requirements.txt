@@ -18,4 +18,5 @@ boto
 azure-cli
 
 # Windows things
+pywinrm
 pywinrm[kerberos]
