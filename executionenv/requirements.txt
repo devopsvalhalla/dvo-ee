@@ -1,0 +1,25 @@
+# Ansible Requirements
+ansible
+ansible-runner
+
+# Misc
+cryptography
+simplejson
+jmespath
+
+# Hashicorp
+hvac    # Vault
+
+# AWS
+botocore
+boto3
+
+# Azure
+azure-cli
+
+# Windows things
+pywinrm
+pywinrm[kerberos]
+
+# Oracle
+cx_Oracle

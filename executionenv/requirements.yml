@@ -1,0 +1,10 @@
+---
+collections:
+  - name: community.aws
+  - name: azure.azcollection
+  - name: ansible.windows
+  - name: community.windows
+  - name: community.general
+  - name: ansible.utils
+  - name: ansible.posix
+  - name: amazon.aws
