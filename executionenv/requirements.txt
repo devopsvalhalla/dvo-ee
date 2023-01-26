@@ -12,7 +12,6 @@ hvac
 # AWS
 botocore
 boto3
-boto
 
 # Azure
 azure-cli
