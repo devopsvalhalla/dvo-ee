@@ -4,7 +4,7 @@ DevOps Valhalla Ansible Execution Environment
 
 ## Installed Software
 
-[Python Packages](/executionenv/requirements.txt)
+[Python Packages](/executionenv/requirements.txt)  
 [Ansible Collection](/executionenv/requirements.yml)
 
 ## License
