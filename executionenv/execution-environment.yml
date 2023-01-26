@@ -16,3 +16,20 @@ additional_build_steps:
   append:
     - RUN microdnf config-manager --add-repo https://rpm.releases.hashicorp.com/v1.3.7/hashicorp.repo
     - RUN microdnf install terraform
+    - RUN |
+        sudo tee -a /etc/yum.repos.d/google-cloud-sdk.repo << EOM
+        [google-cloud-cli]
+        name=Google Cloud CLI
+        baseurl=https://packages.cloud.google.com/yum/repos/cloud-sdk-el8-x86_64
+        enabled=1
+        gpgcheck=1
+        repo_gpgcheck=0
+        gpgkey=https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+        EOM
+        microdnf install google-cloud-cli
+    - RUN |
+        cd ~
+        wget https://github.com/digitalocean/doctl/releases/download/v1.92.0/doctl-1.92.0-linux-amd64.tar.gz
+        tar xf ~/doctl-1.92.0-linux-amd64.tar.gz
+        mv ~/doctl /usr/local/bin
+    - RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
