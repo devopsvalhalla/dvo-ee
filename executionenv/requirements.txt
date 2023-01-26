@@ -2,12 +2,13 @@
 ansible
 ansible-runner
 
+# Misc
 cryptography
 simplejson
 jmespath
 
-# Hashicorp vault
-hvac
+# Hashicorp
+hvac    # Vault
 
 # AWS
 botocore
@@ -19,3 +20,6 @@ azure-cli
 # Windows things
 pywinrm
 pywinrm[kerberos]
+
+# Oracle
+cx_Oracle
